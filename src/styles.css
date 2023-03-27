@@ -1,25 +1,32 @@
 :root {
   --primary-color: #6c63ff;
-  --secondary-color: #f5f2fe;
+  --secondary-color: #f9f7fe;
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 body {
-  margin: 100px 0;
+  margin: 0px 0px;
+  font-family: var(--default-font-family);
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
+  color: black;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
 }
 
 h1 {
   font-size: 96px;
+  line-height: 1.5;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 64px;
 }
 
 h3 {
@@ -28,8 +35,34 @@ h3 {
 }
 
 p {
-  font-size: 18px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+.hero {
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 110px 20px;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: #272142;
+}
+.about p {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  color: #272142;
+}
+
+.hero h2 {
+  font-family: var(--heading-font-family);
+  font-weight: normal;
   line-height: 1.5;
+  font-size: 24px;
 }
 
 .navigation-links {
@@ -44,25 +77,28 @@ p {
 
 .primary-link {
   border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
   color: white;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+  background: var(--primary-color);
+  /* box-shadow: var(--box-shadow); */
 }
 
 .primary-link:hover {
   color: white;
 }
 
-.secondary-link {
-  border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
+.btn-branding-outline {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+.project-desciption {
+  padding: 120px 60px;
 }
 
 .homepage-link {
@@ -91,24 +127,31 @@ p {
   text-decoration: underline;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 900px) {
   h1 {
-    font-size: 48px;
-    line-height: 1.5;
+    font-size: 44px;
+    line-height: 2;
   }
 
   h2 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 44px;
   }
 
   p {
     text-align: center;
   }
 
-  .project-link {
+  .hero {
+    padding: 80px 20px;
+  }
+
+  /* .project-link {
     display: block;
     text-align: center;
     margin: 0 20px;
+  } */
+  .project-desciption {
+    padding: 0;
+    text-align: center;
   }
 }
